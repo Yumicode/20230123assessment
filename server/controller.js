@@ -16,10 +16,10 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
 module.exports = {
     getCountries:(req, res) => {
         sequelize.query(`
-        SELECT * FROM countries;`
+        SELECT * FROM countries;`)
         .then(dbRes => res.status(200).send(dbRes[0]))
         .catch(err => console.log(err))
-    }
+    },
     createCity:(req, res) => {
         const {name, rating, countryId}=req.body;
         sequelize.query(`
