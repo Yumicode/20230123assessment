@@ -58,8 +58,8 @@ module.exports = {
 
             create table cities (
                 cities_id serial primary key, 
-                name varchar
-                rating int
+                name varchar(25),
+                rating int,
                 country_id INT NULL REFERENCES countries(country_id)
             );
 
